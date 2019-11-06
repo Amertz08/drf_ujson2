@@ -3,6 +3,10 @@
 - h3 heading
 - X.X.X - YYYY-MM-DD
 
+### 1.4.1 - 2019-11-05
+
+- Fixed repo url in `setup.py`
+
 ### 1.4.0 - 2019-11-05
 
 - Drop `py27` support

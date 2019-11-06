@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Gizmag",
     author_email="tech@gizmag.com",
-    url="https://github.com/Amertz08/drf-ujson-renderer",
+    url="https://github.com/Amertz08/drf-ujson2",
     packages=find_packages(exclude=["tests"]),
     install_requires=["django", "ujson>=1.35", "djangorestframework"],
     extras_require={"dev": ["pytest", "pytest-runner", "pytest-cov", "pytest-mock"]},
