@@ -3,6 +3,13 @@
 - h3 heading
 - X.X.X - YYYY-MM-DD
 
+### 1.5.0 - 2020-02-13
+
+- Dropped support for `python<3.6`
+- Type hinting
+- `Django3` testing
+- Added `drf_ujson.__version__`
+
 ### 1.4.1 - 2019-11-05
 
 - Fixed repo url in `setup.py`
