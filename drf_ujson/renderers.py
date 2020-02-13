@@ -1,3 +1,5 @@
+from typing import Union, Optional
+
 from rest_framework.renderers import JSONRenderer
 import ujson
 
@@ -13,14 +15,19 @@ class UJSONRenderer(JSONRenderer):
     """
 
     # Controls how many decimals to encode for double or decimal values.
-    double_precision = 9
+    double_precision: int = 9
     # Controls whether forward slashes (/) are escaped.
-    escape_forward_slashes = False
+    escape_forward_slashes: bool = False
     # Used to enable special encoding of "unsafe" HTML characters into safer
     # Unicode sequences.
-    encode_html_chars = False
+    encode_html_chars: bool = False
 
-    def render(self, data, accepted_media_type=None, renderer_context=None):
+    def render(
+        self,
+        data: Union[dict, None],
+        accepted_media_type: Optional[str] = None,
+        renderer_context: Optional[str] = None,
+    ) -> bytes:
 
         if data is None:
             return bytes()

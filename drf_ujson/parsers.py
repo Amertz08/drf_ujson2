@@ -20,7 +20,9 @@ class UJSONParser(BaseParser):
     # functionality.
     precise_float = False
 
-    def parse(self, stream, media_type=None, parser_context=None):
+    def parse(
+        self, stream, media_type: str = None, parser_context: dict = None
+    ) -> dict:
         """
         Parses the incoming bytestream as JSON and returns the resulting data.
         """
