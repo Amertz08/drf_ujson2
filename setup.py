@@ -10,6 +10,7 @@ setup(
     version="1.4.1",
     python_requires=">=3.6",
     description="Django Rest Framework UJSON Renderer",
+    keywords="django,djangorestframework,ujson",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Gizmag",
@@ -35,5 +36,7 @@ setup(
         "Framework :: Django :: 2.1",
         "Framework :: Django :: 2.2",
         "Framework :: Django :: 3.0",
+        "Intended Audience :: Developers",
+        "License :: OSI Approved :: MIT License",
     ],
 )
