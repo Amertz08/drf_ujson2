@@ -2,12 +2,14 @@
 
 from setuptools import setup, find_packages
 
+from drf_ujson import __version__
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="drf_ujson2",
-    version="1.4.1",
+    version=".".join([str(i) for i in __version__]),
     python_requires=">=3.6",
     description="Django Rest Framework UJSON Renderer",
     keywords="django,djangorestframework,ujson",
