@@ -10,7 +10,7 @@ matrix:
     - python: 3.6
       env: TOX_ENV=format
     - python: 3.6
-      env: TOX_ENV=mypy
+      env: TOX_ENV=typing
     - python: 3.6
       env: TOX_ENV=py36-django2
     - python: 3.6
