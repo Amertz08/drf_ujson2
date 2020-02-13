@@ -1,4 +1,4 @@
-from typing import Union, Optional
+from typing import Union, Optional, Mapping, Any
 
 from rest_framework.renderers import JSONRenderer
 import ujson
@@ -26,12 +26,13 @@ class UJSONRenderer(JSONRenderer):
         self,
         data: Union[dict, None],
         accepted_media_type: Optional[str] = None,
-        renderer_context: Optional[str] = None,
+        renderer_context: Mapping[str, Any] = None,
     ) -> bytes:
 
         if data is None:
             return bytes()
 
+        accepted_media_type = accepted_media_type or ""
         renderer_context = renderer_context or {}
         indent = self.get_indent(accepted_media_type, renderer_context)
 
