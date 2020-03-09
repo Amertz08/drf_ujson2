@@ -3,6 +3,10 @@
 - h3 heading
 - X.X.X - YYYY-MM-DD
 
+### 1.5.1 - 2020-03-09
+
+- Pin `ujson<2`
+
 ### 1.5.0 - 2020-02-13
 
 - Dropped support for `python<3.6`
@@ -34,4 +38,3 @@
 - Added `MANIFEST.in`
     - included `README.md`
     - included `LICENSE`
-    
