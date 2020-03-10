@@ -21,13 +21,7 @@ setup(
     packages=find_packages(exclude=["tests"]),
     install_requires=["django", "ujson>=2.0.1", "djangorestframework"],
     extras_require={
-        "dev": [
-            "pytest",
-            "pytest-django",
-            "pytest-runner",
-            "pytest-cov",
-            "pytest-mock",
-        ]
+        "dev": ["pytest", "pytest-django", "pytest-runner", "pytest-cov", "pytest-mock"]
     },
     classifiers=[
         "Development Status :: 5 - Production/Stable",
