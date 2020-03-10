@@ -3,6 +3,10 @@
 - h3 heading
 - X.X.X - YYYY-MM-DD
 
+### 1.6.0 - 2020-03-10
+
+- Add `ujson>=2` compatibility
+
 ### 1.5.1 - 2020-03-09
 
 - Pin `ujson<2`
