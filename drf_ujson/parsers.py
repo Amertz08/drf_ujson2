@@ -17,11 +17,6 @@ class UJSONParser(BaseParser):
     media_type: str = "application/json"
     renderer_class: Type[BaseRenderer] = JSONRenderer
 
-    # Set to enable usage of higher precision (strtod) function when decoding
-    # string to double values. Default is to use fast but less precise builtin
-    # functionality.
-    precise_float: bool = False
-
     def parse(
         self,
         stream,
@@ -36,6 +31,6 @@ class UJSONParser(BaseParser):
 
         try:
             data = stream.read().decode(encoding)
-            return ujson.loads(data, precise_float=self.precise_float)
+            return ujson.loads(data)
         except ValueError as exc:
             raise ParseError("JSON parse error - %s" % str(exc))

@@ -19,7 +19,7 @@ setup(
     author_email="tech@gizmag.com",
     url="https://github.com/Amertz08/drf-ujson2",
     packages=find_packages(exclude=["tests"]),
-    install_requires=["django", "ujson>=1.35,<2", "djangorestframework"],
+    install_requires=["django", "ujson>=2.0.1", "djangorestframework"],
     extras_require={
         "dev": ["pytest", "pytest-django", "pytest-runner", "pytest-cov", "pytest-mock"]
     },

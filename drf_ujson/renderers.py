@@ -14,8 +14,6 @@ class UJSONRenderer(JSONRenderer):
     Uses the blazing-fast ujson library for serialization.
     """
 
-    # Controls how many decimals to encode for double or decimal values.
-    double_precision: int = 9
     # Controls whether forward slashes (/) are escaped.
     escape_forward_slashes: bool = False
     # Used to enable special encoding of "unsafe" HTML characters into safer
@@ -41,7 +39,6 @@ class UJSONRenderer(JSONRenderer):
             ensure_ascii=self.ensure_ascii,
             escape_forward_slashes=self.escape_forward_slashes,
             encode_html_chars=self.encode_html_chars,
-            double_precision=self.double_precision,
             indent=indent or 0,
         )
 
