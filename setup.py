@@ -17,7 +17,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Gizmag",
     author_email="tech@gizmag.com",
-    url="https://github.com/Amertz08/drf-ujson2",
+    url="https://github.com/Amertz08/drf_ujson2",
     packages=find_packages(exclude=["tests"]),
     install_requires=["django", "ujson>=2.0.1", "djangorestframework"],
     extras_require={
