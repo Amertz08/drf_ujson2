@@ -7,9 +7,10 @@ from drf_ujson import __version__
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+# TODO: remove alpha
 setup(
     name="drf_ujson2",
-    version=".".join([str(i) for i in __version__]),
+    version=".".join([str(i) for i in __version__]) + ".alpha1",
     python_requires=">=3.6",
     description="Django Rest Framework UJSON Renderer",
     keywords="django,djangorestframework,ujson",

@@ -20,6 +20,9 @@ class UJSONRenderer(JSONRenderer):
     # Unicode sequences.
     encode_html_chars: bool = False
 
+    # TODO: typing
+    translate_func = None
+
     def render(
         self,
         data: Union[dict, None],
@@ -29,6 +32,9 @@ class UJSONRenderer(JSONRenderer):
 
         if data is None:
             return bytes()
+
+        if self.translate_func is not None:
+            data = self.translate_func(data)
 
         accepted_media_type = accepted_media_type or ""
         renderer_context = renderer_context or {}

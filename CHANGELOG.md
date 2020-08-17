@@ -3,6 +3,11 @@
 - h3 heading
 - X.X.X - YYYY-MM-DD
 
+### 1.7.0.alpha1 - 2020-08-17
+
+- Added `UJSONRenderer.translate_func` attribute for translating data into a `ujson`
+serializable object.
+
 ### 1.6.0 - 2020-03-10
 
 - Add `ujson>=2` compatibility
