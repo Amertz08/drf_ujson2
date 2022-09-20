@@ -1,6 +1,7 @@
 from typing import Union, Optional, Mapping, Any
 
 from rest_framework.renderers import JSONRenderer
+from rest_framework.utils.encoders import JSONEncoder
 import ujson
 
 
@@ -33,10 +34,12 @@ class UJSONRenderer(JSONRenderer):
         accepted_media_type = accepted_media_type or ""
         renderer_context = renderer_context or {}
         indent = self.get_indent(accepted_media_type, renderer_context)
+        encoder = JSONEncoder()
 
         ret = ujson.dumps(
             data,
             ensure_ascii=self.ensure_ascii,
+            default=encoder.default,
             escape_forward_slashes=self.escape_forward_slashes,
             encode_html_chars=self.encode_html_chars,
             indent=indent or 0,
