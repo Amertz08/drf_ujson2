@@ -38,10 +38,10 @@ class UJSONRenderer(JSONRenderer):
         ret = ujson.dumps(
             data,
             ensure_ascii=self.ensure_ascii,
-            default=encoder.default,
             escape_forward_slashes=self.escape_forward_slashes,
             encode_html_chars=self.encode_html_chars,
             indent=indent or 0,
+            default=encoder.default,
         )
 
         # force return value to unicode
