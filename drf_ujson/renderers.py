@@ -33,6 +33,7 @@ class UJSONRenderer(JSONRenderer):
         accepted_media_type = accepted_media_type or ""
         renderer_context = renderer_context or {}
         indent = self.get_indent(accepted_media_type, renderer_context)
+        encoder = self.encoder_class()
 
         ret = ujson.dumps(
             data,
@@ -40,6 +41,7 @@ class UJSONRenderer(JSONRenderer):
             escape_forward_slashes=self.escape_forward_slashes,
             encode_html_chars=self.encode_html_chars,
             indent=indent or 0,
+            default=encoder.default,
         )
 
         # force return value to unicode
