@@ -20,7 +20,7 @@ class UJSONParser(BaseParser):
     def parse(
         self,
         stream,
-        media_type: str = None,
+        media_type: Optional[str] = None,
         parser_context: Optional[Mapping[str, Any]] = None,
     ) -> dict:
         """

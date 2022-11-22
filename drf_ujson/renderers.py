@@ -24,7 +24,7 @@ class UJSONRenderer(JSONRenderer):
         self,
         data: Union[dict, None],
         accepted_media_type: Optional[str] = None,
-        renderer_context: Mapping[str, Any] = None,
+        renderer_context: Optional[Mapping[str, Any]] = None,
     ) -> bytes:
 
         if data is None:
@@ -41,7 +41,7 @@ class UJSONRenderer(JSONRenderer):
             escape_forward_slashes=self.escape_forward_slashes,
             encode_html_chars=self.encode_html_chars,
             indent=indent or 0,
-            default=encoder.default,
+            default=encoder.default,  # type: ignore
         )
 
         # force return value to unicode
