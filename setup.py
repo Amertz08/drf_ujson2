@@ -20,9 +20,7 @@ setup(
     url="https://github.com/Amertz08/drf_ujson2",
     packages=find_packages(exclude=["tests"]),
     install_requires=["django", "ujson>=2.0.1", "djangorestframework"],
-    extras_require={
-        "dev": ["pytest", "pytest-django", "pytest-cov", "pytest-mock"]
-    },
+    extras_require={"dev": ["pytest", "pytest-django", "pytest-cov", "pytest-mock"]},
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Programming Language :: Python :: 3.10",
