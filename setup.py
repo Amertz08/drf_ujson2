@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 setup(
     name="drf_ujson2",
     version=".".join([str(i) for i in __version__]),
-    python_requires=">=3.6",
+    python_requires=">=3.10",
     description="Django Rest Framework UJSON Renderer",
     keywords="django,djangorestframework,ujson",
     long_description=long_description,
@@ -21,17 +21,18 @@ setup(
     packages=find_packages(exclude=["tests"]),
     install_requires=["django", "ujson>=2.0.1", "djangorestframework"],
     extras_require={
-        "dev": ["pytest", "pytest-django", "pytest-runner", "pytest-cov", "pytest-mock"]
+        "dev": ["pytest", "pytest-django", "pytest-cov", "pytest-mock"]
     },
     classifiers=[
         "Development Status :: 5 - Production/Stable",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
-        "Framework :: Django :: 3.2",
-        "Framework :: Django :: 4.0",
-        "Framework :: Django :: 4.1",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Framework :: Django :: 4.2",
+        "Framework :: Django :: 5.0",
+        "Framework :: Django :: 5.1",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
     ],
