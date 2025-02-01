@@ -5,7 +5,7 @@ install:
 	.[dev]
 
 test:
-	@python setup.py test
+	@python -m pytest
 
 dist:
 	@python setup.py sdist bdist_wheel
